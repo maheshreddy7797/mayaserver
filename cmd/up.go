@@ -197,6 +197,7 @@ func (c *UpCommand) setupMayaServer(mconfig *config.MayaConfig, logOutput io.Wri
 	return nil
 }
 
+// Run maya api server as a long running daemon.
 func (c *UpCommand) Run(args []string) int {
 	c.Ui = &cli.PrefixedUi{
 		OutputPrefix: "==> ",
@@ -369,10 +370,12 @@ func (c *UpCommand) handleReload(mconfig *config.MayaConfig) *config.MayaConfig 
 	return newConf
 }
 
+// Synopsis will return summary string
 func (c *UpCommand) Synopsis() string {
 	return "Starts maya api server"
 }
 
+// Help dispalys the Usage and General options of maya api server
 func (c *UpCommand) Help() string {
 	helpText := `
 Usage: m-apiserver up [options]
@@ -415,4 +418,5 @@ General Options :
     the current hostname of the machine.
  `
 	return strings.TrimSpace(helpText)
+
 }
