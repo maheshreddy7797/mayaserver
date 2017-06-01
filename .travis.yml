@@ -38,7 +38,7 @@ deploy:
   skip_cleanup: true
   overwrite: true
   on:
-    repo: maheshreddy7797/mayaserver
+    repo: openebs/mayaserver
     tags: true
 branches:
   except:
