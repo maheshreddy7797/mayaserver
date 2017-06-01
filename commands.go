@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/mitchellh/cli"
 	"github.com/maheshreddy7797/mayaserver/cmd"
+	"github.com/mitchellh/cli"
 )
 
 // Commands returns the mapping of CLI commands for Maya server. The meta
