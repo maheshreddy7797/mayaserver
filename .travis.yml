@@ -16,7 +16,7 @@ before_install:
   - sudo apt-get update
 
 install:
-  - go get github.com/openebs/mayaserver/cmd
+  - go get github.com/maheshreddy7797/mayaserver/cmd
   - make init
   - make
 
@@ -38,7 +38,7 @@ deploy:
   skip_cleanup: true
   overwrite: true
   on:
-    repo: openebs/mayaserver
+    repo: maheshreddy7797/mayaserver
     tags: true
 branches:
   except:
