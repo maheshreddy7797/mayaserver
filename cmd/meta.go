@@ -14,8 +14,8 @@ import (
 
 const (
 	// Constants for CLI identifier length
-	shortId = 8
-	fullId  = 36
+	shortID = 8
+	fullID  = 36
 )
 
 // FlagSetFlags is an enum to define what flags are present in the
@@ -23,12 +23,9 @@ const (
 type FlagSetFlags uint
 
 const (
-	// FlagSetNone sets FlagSetFlags to 0
-	FlagSetNone FlagSetFlags = 0
-	// FlagSetClient sets FlagSetFlags to 1 and varies
-	FlagSetClient FlagSetFlags = 1 << iota
-	// FlagSetDefault sets default value
-	FlagSetDefault = FlagSetClient
+	FlagSetNone    FlagSetFlags = 0
+	FlagSetClient  FlagSetFlags = 1 << iota
+	FlagSetDefault              = FlagSetClient
 )
 
 // Meta contains the meta-options and functionality that nearly every
@@ -69,7 +66,7 @@ func (m *Meta) FlagSet(n string, fs FlagSetFlags) *flag.FlagSet {
 	return f
 }
 
-// Colorize returns all the including fields.
+// Colorize set the string format to default color.
 func (m *Meta) Colorize() *colorstring.Colorize {
 	return &colorstring.Colorize{
 		Colors:  colorstring.DefaultColors,
