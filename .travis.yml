@@ -16,7 +16,6 @@ before_install:
   - sudo apt-get update
 
 install:
- - go get github.com/openebs/mayaserver
   - make init
   - make
 
