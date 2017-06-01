@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/maheshreddy7797/mayaserver/cmd"
+	"github.com/openebs/mayaserver/cmd"
 	"github.com/mitchellh/cli"
 )
 
